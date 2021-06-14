@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>My Family</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>
+            My Family Book
+        </h1>
+        <img id= "img1" src="download.jpg">
+        <h2 id="member_name"></h2>
+        <button onclick="update();">Next</button>
+    </body>
+
+    <script>
+        var images =
+        ["father.jpg","mother.jpg","Brothers.jpg"];
+        var names =
+        ["Pulakesh Gogoi", "Kripamoni Gogoi", "Ayushman Gogoi and Anindya Sundar Gogoi"];
+
+        var i = 0;
+        function update()
+        {
+            i++;
+            var number_of_member = 3;
+            if( i> number_of_member)
+            {
+                i = 0;
+            }
+            var updatImage=image[i];
+            var updateName=names[i];
+            document.getElementById("img1").src=updatImage;
+            document.getElementById("member_name").innerHTML=updateName;
+        }
+    </script>
+</html>
